@@ -170,3 +170,7 @@ async def stream_gemini_response(prompt: str):
 @app.post("/chat")
 async def chat(chat_message: ChatMessage):
     return StreamingResponse(stream_gemini_response(chat_message.message), media_type="text/plain")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
