@@ -12,7 +12,7 @@ then
     echo "See https://github.com/astral-sh/uv for installation instructions."
     exit 1
 fi
-uv pip sync backend/requirements.txt
+uv pip install -r backend/requirements.txt
 
 # --- Frontend Dependencies ---
 echo "Installing frontend dependencies..."

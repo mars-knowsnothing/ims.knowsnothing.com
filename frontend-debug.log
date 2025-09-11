@@ -1,5 +1,5 @@
 yarn run v1.22.22
-$ next dev --port 3000
+$ next dev --port 3001
  ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
  We detected multiple lockfiles and selected the directory of /home/mars/claude-code/ims.knowsnothing.com/package-lock.json as the root directory.
  To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
@@ -7,15 +7,22 @@ $ next dev --port 3000
  Detected additional lockfiles: 
    * /home/mars/claude-code/ims.knowsnothing.com/frontend/yarn.lock
 
- ⨯ Failed to start server
-Error: listen EADDRINUSE: address already in use :::3000
-    at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
-    at new Promise (<anonymous>) {
-  code: 'EADDRINUSE',
-  errno: -98,
-  syscall: 'listen',
-  address: '::',
-  port: 3000
-}
-[?25h
-Done in 0.81s.
+   ▲ Next.js 15.5.2
+   - Local:        http://localhost:3001
+   - Network:      http://172.17.232.62:3001
+
+ ✓ Starting...
+ ✓ Ready in 1632ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.3s (682 modules)
+ GET / 200 in 2610ms
+ ✓ Compiled /favicon.ico in 328ms (428 modules)
+ GET /favicon.ico 200 in 401ms
+ ○ Compiling /chat ...
+ ✓ Compiled /chat in 1036ms (708 modules)
+ GET /chat 200 in 1167ms
+ GET /chat 200 in 17ms
+ ✓ Compiled in 312ms (691 modules)
+ GET /chat 200 in 116ms
+ GET /chat 200 in 160ms
+ ○ Compiling /favicon.ico ...

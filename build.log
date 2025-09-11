@@ -1,0 +1,29 @@
+yarn run v1.22.22
+$ next build
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/mars/claude-code/ims.knowsnothing.com/package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /home/mars/claude-code/ims.knowsnothing.com/frontend/yarn.lock
+
+   ▲ Next.js 15.5.2
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 2.3s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./src/app/chat/page.tsx:24:30
+Type error: Expected 1 arguments, but got 0.
+
+[0m [90m 22 |[39m
+ [90m 23 |[39m   [36mconst[39m messagesEndRef [33m=[39m useRef[33m<[39m[33mHTMLDivElement[39m[33m>[39m([36mnull[39m)[33m;[39m
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m inactivityTimerRef [33m=[39m useRef[33m<[39m[33mNodeJS[39m[33m.[39m[33mTimeout[39m[33m>[39m()[33m;[39m
+ [90m    |[39m                              [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m lastActivityRef [33m=[39m useRef[33m<[39m[33mnumber[39m[33m>[39m([33mDate[39m[33m.[39mnow())[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [36mconst[39m { detectEmotion } [33m=[39m useEmotionDetection()[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

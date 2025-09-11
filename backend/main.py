@@ -13,7 +13,7 @@ import logging
 # --- Logging Configuration ---
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
-                    filename='/app/backend.log',
+                    filename='backend.log',
                     filemode='w')
 
 # --- Environment and AI Configuration ---

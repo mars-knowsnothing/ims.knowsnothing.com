@@ -27,9 +27,10 @@ async function getPost(id: string): Promise<Post | null> {
   }
 }
 
-// The page component receives params, which includes the dynamic segment [id]
-export default async function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = await getPost(params.id);
+// The page component receives params as a Promise in Next.js 15+
+export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const post = await getPost(id);
 
   if (!post) {
     return (

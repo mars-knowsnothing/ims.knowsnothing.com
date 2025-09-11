@@ -1,4 +1,22 @@
-INFO:     Started server process [5692]
+Error processing line 1 of /home/mars/miniconda3/lib/python3.13/site-packages/distutils-precedence.pth:
+
+  Traceback (most recent call last):
+    File "<frozen site>", line 207, in addpackage
+    File "<string>", line 1, in <module>
+  ModuleNotFoundError: No module named '_distutils_hack'
+
+Remainder of file ignored
+INFO:     Started server process [125930]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:42952 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42964 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42980 - "GET /posts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50644 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50654 - "POST /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48436 - "POST /chat HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:55104 - "POST /chat HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:55114 - "POST /chat HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:57894 - "POST /chat HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:48390 - "POST /chat HTTP/1.1" 200 OK
