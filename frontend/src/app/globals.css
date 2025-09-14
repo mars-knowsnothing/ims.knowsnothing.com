@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Matrix-themed scrollbar styling */
+.matrix-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e rgba(0, 0, 0, 0.3);
+}
+
+.matrix-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.matrix-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+
+.matrix-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.matrix-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #16a34a, #15803d);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}
+
+.matrix-scrollbar::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(45deg, #15803d, #166534);
+  box-shadow: 0 0 16px rgba(34, 197, 94, 1);
+  border: 1px solid rgba(34, 197, 94, 0.8);
+}
+
+.matrix-scrollbar::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Matrix cursor animation */
+.matrix-cursor {
+  animation: matrixBlink 1.2s infinite;
+  text-shadow: 0 0 8px #22c55e, 0 0 16px #22c55e;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+@keyframes matrixBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Retro CRT screen effect for chat area */
+.matrix-scrollbar {
+  position: relative;
+}
+
+.matrix-scrollbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(34, 197, 94, 0.03) 50%
+  );
+  background-size: 100% 2px;
+  pointer-events: none;
+  z-index: 1;
+  animation: scanlines 0.1s linear infinite;
+  border-radius: inherit;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(2px); }
+}
+
+/* Custom selection for Matrix theme */
+.matrix-scrollbar ::selection {
+  background: rgba(34, 197, 94, 0.3);
+  color: #ffffff;
+}
+
+/* Enhanced glow effect container */
+.matrix-scrollbar-container {
+  position: relative;
+  padding: 2px;
+  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+  border-radius: 8px;
+}
